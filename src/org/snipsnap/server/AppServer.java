@@ -92,7 +92,7 @@ public class AppServer {
     try {
       jettyServer = new Server(getResource("/conf/jetty.conf", "./conf/jetty.conf"));
       WebApplicationContext installContext =
-              jettyServer.addWebApplication("/install", AppServer.class.getResource("/snipsnap-installer.war").toString());
+              jettyServer.addWebApplication("/install", "./lib/snipsnap-installer.war");
       installContext.setAttribute("server.config", serverPrefs);
       jettyServer.start();
     } catch (IOException e) {
@@ -268,6 +268,8 @@ public class AppServer {
         e.printStackTrace();
       }
     }
+
+    System.out.print(serverPrefs);
 
     return serverPrefs;
   }

@@ -114,7 +114,7 @@ public class AdminInitFilter implements Filter {
 
       // check authentication and verify session
       if (!"true".equals(session.getAttribute(ATT_AUTHENTICATED))) {
-        String serverPass = (String) serverConf.get(ServerConfiguration.ADMIN_PASS);
+        String serverPass = (String) serverConf.get(ServerConfiguration.ADMIN_PASS, "");
         String installPass = path;
         if ("".equals(installPass) || "/".equals(installPass)) {
           installPass = "/" + request.getParameter("password");
