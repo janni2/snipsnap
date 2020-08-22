@@ -1,6 +1,3 @@
-** REFERENCE CODE **
-[This code is the original SnipSnap source uploaded for reference!]
-
 SnipSnap 
 Copyright (c) 2000-2006 Fraunhofer Gesellschaft
 Fraunhofer Institute for Computer Architecture and Software Technology
@@ -33,4 +30,4 @@ http://9e897a7bdf64:8668/install/76f8b
 change to
 http://localhost:8668/install/76f8b
 
-![Screenshot](screenshot.png?raw=true "Screenshot")
+![Screenshot](/screenshot.png?raw=true "Screenshot")
