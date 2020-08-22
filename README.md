@@ -20,12 +20,12 @@ Enjoy your SnipSnap!
 
 -----------------------------------------------------------------------
 
-Build & Run ('as is')
+### Build & Run ('as is')
 
-docker build -t snipsnap .
-docker run -p 8668:8668 snipsnap
+- docker build -t snipsnap .
+- docker run -p 8668:8668 snipsnap
 
-- The server ideally started and shows a weired adress like
+The server ideally started and shows a weired adress like
 http://9e897a7bdf64:8668/install/76f8b
 change to
 http://localhost:8668/install/76f8b
