@@ -1,0 +1,4 @@
+target/
+local-repo/
+*.class
+*.log

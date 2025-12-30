@@ -1,0 +1,9 @@
+version: '3'
+services:
+  snipsnap:
+    build: .
+    ports:
+      - "8668:8668"
+    volumes:
+      - ./conf:/app/conf
+    restart: unless-stopped
