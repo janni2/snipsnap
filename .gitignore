@@ -2,3 +2,5 @@ target/
 local-repo/
 *.class
 *.log
+.idea/
+cls/
