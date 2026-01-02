@@ -1,0 +1,13 @@
+target/
+cls/
+build/
+*.class
+*.jar
+*.war
+*.log
+.DS_Store
+install-libs.sh
+generate_migration_scripts.py
+generate_config.py
+src/org/snipsnap/config/Globals.java
+src/snipsnap/api/config/Configuration.java
