@@ -1,17 +1,23 @@
-FROM openjdk:7
+FROM eclipse-temurin:8-jdk
 
-RUN apt-get -y update && apt-get -y install ant
+# Install Ant
+RUN apt-get update && \
+    apt-get install -y ant && \
+    rm -rf /var/lib/apt/lists/*
 
-ENV APPPATH /vagrant
+WORKDIR /app
 
-COPY . $APPPATH
-WORKDIR $APPPATH
+# Copy project files
+COPY . .
 
+# Run build
+# Compile for Java 1.5 target using Java 8 JDK
 RUN ant -Dant.build.javac.target=1.5 -Dant.build.javac.source=1.5 clean all
-RUN rm -rf cls
 
-EXPOSE 8574 8668
+# Expose ports
+# 8668: HTTP
+# 8574: Admin RPC
+EXPOSE 8668 8574
 
-CMD java -cp $APPPATH/lib:$APPPATH/lib/* -server org.snipsnap.server.AppServer
-
-# OK needs debugging
+# Run using the launcher which handles classpath and tools.jar configuration
+CMD ["java", "-jar", "lib/snipsnap.jar"]

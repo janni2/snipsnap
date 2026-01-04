@@ -1,0 +1,38 @@
+# Ant Build Artifacts
+cls/
+build/
+dist/
+
+# Maven Build Artifacts
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+snipsnap_*.log
+
+# Generated Source Files
+src/snipsnap/api/config/Configuration.java
+src/org/snipsnap/config/Globals.java
+
+# Temporary Files
+tmp/
+temp/
+CVS/
+.cvsignore
